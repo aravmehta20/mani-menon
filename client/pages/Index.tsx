@@ -334,10 +334,10 @@ export default function Index() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                onClick={() => scrollToSection("legacy")}
+                onClick={() => scrollToSection("home")}
                 className="px-8 py-6 text-lg rounded-xl cursor-pointer"
               >
-                Learn More
+                Back to Top
               </Button>
               <Button
                 size="lg"
