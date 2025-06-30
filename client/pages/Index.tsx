@@ -334,10 +334,10 @@ export default function Index() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                onClick={() => scrollToSection("home")}
+                onClick={() => window.open("tel:212-241-4812")}
                 className="px-8 py-6 text-lg rounded-xl cursor-pointer"
               >
-                Back to Top
+                Contact Office: (212) 241-4812
               </Button>
               <Button
                 size="lg"
@@ -352,6 +352,34 @@ export default function Index() {
               >
                 Research Publications
               </Button>
+            </div>
+
+            <div className="mt-6 p-6 bg-card/50 rounded-xl border border-border">
+              <div className="text-center space-y-3">
+                <h3 className="font-semibold text-foreground">
+                  Professional Contact
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  Chief of Strategy and Innovation, Department of Urology
+                  <br />
+                  Mount Sinai Health System, New York City
+                  <br />
+                  Professor of Urology, Icahn School of Medicine at Mount Sinai
+                </p>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() =>
+                    window.open(
+                      "https://www.mountsinai.org/profiles/mani-menon",
+                      "_blank",
+                    )
+                  }
+                  className="mt-3"
+                >
+                  Mount Sinai Profile
+                </Button>
+              </div>
             </div>
           </div>
         </div>
