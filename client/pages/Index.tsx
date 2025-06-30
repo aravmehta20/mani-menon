@@ -20,6 +20,16 @@ export default function Index() {
     setIsVisible(true);
   }, []);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   const achievements = [
     {
       icon: GraduationCap,
@@ -64,30 +74,30 @@ export default function Index() {
               </span>
             </div>
             <div className="hidden md:flex space-x-8">
-              <a
-                href="#home"
-                className="text-foreground hover:text-primary transition-colors"
+              <button
+                onClick={() => scrollToSection("home")}
+                className="text-foreground hover:text-primary transition-colors cursor-pointer"
               >
                 Home
-              </a>
-              <a
-                href="#achievements"
-                className="text-foreground hover:text-primary transition-colors"
+              </button>
+              <button
+                onClick={() => scrollToSection("achievements")}
+                className="text-foreground hover:text-primary transition-colors cursor-pointer"
               >
                 Achievements
-              </a>
-              <a
-                href="#legacy"
-                className="text-foreground hover:text-primary transition-colors"
+              </button>
+              <button
+                onClick={() => scrollToSection("legacy")}
+                className="text-foreground hover:text-primary transition-colors cursor-pointer"
               >
                 Legacy
-              </a>
-              <a
-                href="#contact"
-                className="text-foreground hover:text-primary transition-colors"
+              </button>
+              <button
+                onClick={() => scrollToSection("contact")}
+                className="text-foreground hover:text-primary transition-colors cursor-pointer"
               >
                 Contact
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -138,7 +148,8 @@ export default function Index() {
 
               <Button
                 size="lg"
-                className="mt-8 px-8 py-6 text-lg rounded-xl bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300 shadow-lg hover:shadow-xl"
+                onClick={() => scrollToSection("achievements")}
+                className="mt-8 px-8 py-6 text-lg rounded-xl bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer"
               >
                 Explore His Legacy
                 <ChevronDown className="ml-2 h-5 w-5" />
@@ -321,13 +332,23 @@ export default function Index() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="px-8 py-6 text-lg rounded-xl">
+              <Button
+                size="lg"
+                onClick={() => scrollToSection("legacy")}
+                className="px-8 py-6 text-lg rounded-xl cursor-pointer"
+              >
                 Learn More
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="px-8 py-6 text-lg rounded-xl"
+                onClick={() =>
+                  window.open(
+                    "https://scholar.google.com/scholar?q=mani+menon+robotic+surgery",
+                    "_blank",
+                  )
+                }
+                className="px-8 py-6 text-lg rounded-xl cursor-pointer"
               >
                 Research Publications
               </Button>
