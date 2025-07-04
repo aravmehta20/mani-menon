@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Mani Menon - Pioneer in Robotic Surgery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 60px 0;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .header h1 {
+            font-size: 3.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .header .subtitle {
+            font-size: 1.3em;
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .header .quote {
+            font-size: 1.1em;
+            color: #34495e;
+            max-width: 600px;
+            margin: 0 auto;
+            font-style: italic;
+            border-left: 4px solid #3498db;
+            padding-left: 20px;
+            text-align: left;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section h2 {
+            font-size: 2.2em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .section p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: #34495e;
+        }
+
+        .achievements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .achievement-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #3498db;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .achievement-card h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #3498db;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #3498db;
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 3px #3498db;
+        }
+
+        .timeline-year {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+            min-width: 150px;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: scale(1.05);
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            margin-top: 40px;
+            color: #7f8c8d;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+        }
+
+        .legacy-quote {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 1.3em;
+            font-style: italic;
+            margin: 30px 0;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5em;
+            }
+            
+            .section {
+                padding: 25px;
+            }
+            
+            .stats {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Dr. Mani Menon</h1>
+            <p class="subtitle">Pioneer in Robotic Surgery & Urologic Oncology</p>
+            <div class="quote">
+                "Innovation in medicine is not just about technology—it's about improving lives, one patient at a time."
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>A Visionary Surgeon</h2>
+            <p>Dr. Mani Menon stands as one of the most influential figures in modern urological surgery. His pioneering work in robotic-assisted surgery has revolutionized the treatment of prostate cancer and transformed the lives of countless patients worldwide.</p>
+            <p>As a surgeon, researcher, and educator, Dr. Menon has dedicated his career to advancing minimally invasive surgical techniques, with a particular focus on preserving quality of life for cancer patients. His innovations have set new standards in precision, recovery time, and patient outcomes.</p>
+        </div>
+
+        <div class="section">
+            <h2>Career Milestones</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">1982</div>
+                    <p>Completed residency in Urology at Johns Hopkins Hospital</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1990s</div>
+                    <p>Joined Henry Ford Health System, beginning his journey in advanced urological procedures</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2000</div>
+                    <p>Performed first robotic-assisted prostatectomy at Henry Ford Hospital</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2010</div>
+                    <p>Founded the Vattikuti Urology Institute, establishing a world-class center for robotic surgery</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2015</div>
+                    <p>Moved to AdventHealth to continue advancing robotic surgical techniques</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">Present</div>
+                    <p>Continues to innovate and mentor the next generation of robotic surgeons</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Revolutionary Achievements</h2>
+            <div class="achievements">
+                <div class="achievement-card">
+                    <h3>Robotic Surgery Pioneer</h3>
+                    <p>One of the first surgeons to perform robotic-assisted prostatectomy, helping to establish the technique as a gold standard in prostate cancer treatment.</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Vattikuti Technique</h3>
+                    <p>Developed the revolutionary "Vattikuti Technique" for robotic prostatectomy, significantly improving surgical outcomes and reducing recovery times.</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Global Impact</h3>
+                    <p>Trained thousands of surgeons worldwide in robotic techniques, spreading advanced surgical methods across continents.</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Research Excellence</h3>
+                    <p>Authored over 300 peer-reviewed publications and numerous book chapters on urological surgery and robotic techniques.</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Innovation Leader</h3>
+                    <p>Continuously pushes the boundaries of what's possible in minimally invasive surgery, always with patient welfare as the primary focus.</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Educator & Mentor</h3>
+                    <p>Dedicated to teaching and mentoring young surgeons, ensuring the continuation of surgical excellence for future generations.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Impact by the Numbers</h2>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">15,000+</span>
+                    <span class="stat-label">Robotic Surgeries Performed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">300+</span>
+                    <span class="stat-label">Publications</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1,000+</span>
+                    <span class="stat-label">Surgeons Trained</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">25+</span>
+                    <span class="stat-label">Years of Innovation</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="legacy-quote">
+            "Dr. Menon's contributions to robotic surgery have not only advanced the field of urology but have fundamentally changed how we approach complex surgical procedures. His legacy lives on in every surgeon he has trained and every patient whose life has been improved through his innovations."
+        </div>
+
+        <div class="section">
+            <h2>A Lasting Legacy</h2>
+            <p>Dr. Mani Menon's impact extends far beyond the operating room. His commitment to advancing surgical techniques while maintaining the highest standards of patient care has set a benchmark for excellence in modern medicine. Through his work, he has demonstrated that true innovation comes from combining cutting-edge technology with compassionate patient care.</p>
+            <p>His dedication to education ensures that his techniques and philosophy will continue to benefit patients for generations to come. The surgeons he has trained now carry forward his commitment to excellence, spreading his influence to medical centers around the world.</p>
+            <p>Today, Dr. Menon continues to push the boundaries of what's possible in robotic surgery, always with the goal of improving patient outcomes and quality of life. His work stands as a testament to the power of innovation, dedication, and the relentless pursuit of medical excellence.</p>
+        </div>
+
+        <div class="footer">
+            <p><strong>Honoring Dr. Mani Menon</strong></p>
+            <p>Pioneer, Innovator, Teacher, Healer</p>
+            <p style="margin-top: 20px; font-style: italic;">"Advancing surgery, one patient at a time."</p>
+        </div>
+    </div>
+</body>
+</html>
